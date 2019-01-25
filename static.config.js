@@ -1,27 +1,19 @@
-import axios from 'axios'
+import Document from './src/components/document/document';
+import renderToHtml from './src/modules/render-styles';
+
+const getSiteData = () => ({title: 'musescape.com'});
+
+const getRoutes = () => [{
+	path: '/',
+	component: 'src/pages/home'
+}, {
+	is404: true,
+	component: 'src/pages/not-found'
+}];
 
 export default {
-  getSiteData: () => ({
-    title: 'React Static',
-  }),
-  getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
-    return [
-      {
-        path: '/blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
-      },
-    ]
-  },
-}
+	getSiteData,
+	getRoutes,
+	renderToHtml,
+	Document
+};
