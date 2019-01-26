@@ -3,7 +3,7 @@ import renderToHtml from './src/modules/renderStyles';
 
 const getSiteData = () => ({
 	siteUrl: 'musescape.com',
-	title: 'Musescape',
+	title: 'Musescape'
 });
 
 const getRoutes = () => [{
