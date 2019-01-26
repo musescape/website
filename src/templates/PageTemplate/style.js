@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Page = styled.div`
-  height: 100vh;
   display: grid;
   margin: 0 2rem;
   grid-gap: 2rem 1rem;
