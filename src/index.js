@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {AppContainer} from 'react-hot-loader';
-import LayoutBase from './components/layout/layout-base';
+import { AppContainer } from 'react-hot-loader';
+import LayoutBase from './core/LayoutBase';
 
 if (typeof document !== 'undefined') {
 	const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;

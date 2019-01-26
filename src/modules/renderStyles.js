@@ -1,5 +1,5 @@
 import React from 'react';
-import {ServerStyleSheet} from 'styled-components';
+import { ServerStyleSheet } from 'styled-components';
 
 const renderStyles = (render, Comp, meta) => {
 	const sheet = new ServerStyleSheet();

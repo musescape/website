@@ -1,14 +1,17 @@
-import Document from './src/components/document/document';
-import renderToHtml from './src/modules/render-styles';
+import Document from './src/core/Document';
+import renderToHtml from './src/modules/renderStyles';
 
-const getSiteData = () => ({title: 'musescape.com'});
+const getSiteData = () => ({
+	siteUrl: 'musescape.com',
+	title: 'Musescape',
+});
 
 const getRoutes = () => [{
 	path: '/',
-	component: 'src/pages/home'
+	component: 'src/pages/Home'
 }, {
 	is404: true,
-	component: 'src/pages/not-found'
+	component: 'src/pages/NotFound'
 }];
 
 export default {
