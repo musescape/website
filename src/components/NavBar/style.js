@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { margins } from '../../theme';
 
 export const Nav = styled.nav`
-  margin-top: 2rem;
+  ${margins}
   
   @supports (display: grid) {  
     margin-top: 0;
   }
 
   grid-area: menu;
-  align-self: center;
   justify-self: end;
+  align-self: center;
     
   @media all and (max-width: 576px) {
     justify-self: start;
@@ -23,8 +24,14 @@ export const NavUl = styled.ul`
 `;
 
 export const NavLi = styled.li`
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.1rem;
-    margin-right: 0.5rem;
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+  }
 `;

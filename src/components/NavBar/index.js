@@ -10,7 +10,7 @@ const NavBar = () => (
         <NavLi>
           <Link to="#">Blog</Link>
         </NavLi>
-        <NavLi style={{marginRight: 0}}>
+        <NavLi>
           <Link to="#">Contact</Link>
         </NavLi>
       </NavUl>

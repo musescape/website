@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { margins } from '../../theme';
 
 export const Footer = styled.footer`
-  margin-top: 2rem;
+  ${margins}
   
   @supports (display: grid) {  
     margin-top: 0;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { margins } from '../../theme';
 
 export const Section = styled.section`
-  margin-top: 2rem;
+  ${margins}
   
   @supports (display: grid) {  
     margin-top: 0;

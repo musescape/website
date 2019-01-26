@@ -20,6 +20,8 @@ const globalStyles = `
   
   body {
     background-color: #fbfbfb;
+    font-family: 'Work Sans', sans-serif;
+		font-weight: 400;
   }
   
   h1, h2, h3 {
@@ -30,6 +32,14 @@ const globalStyles = `
     html {
       font-size: 14px;
     }
+  }
+`;
+
+const margins = `
+  margin: 0 2rem;
+  
+  @media all and (max-width: 992px) {
+    margin: 0 1rem;
   }
 `;
 
@@ -45,6 +55,7 @@ const color = {
 };
 
 export {
+	color,
 	globalStyles,
-	color
+	margins
 };

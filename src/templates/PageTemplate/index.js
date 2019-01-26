@@ -5,7 +5,6 @@ import { injectGlobal } from 'styled-components';
 import { globalStyles } from '../../theme';
 import { Page, Main } from './style';
 import HeaderBar from '../../components/HeaderBar';
-import NavBar from '../../components/NavBar';
 import AsideMenu from '../../components/AsideMenu';
 import SubSection from '../../components/SubSection';
 import FooterBar from '../../components/FooterBar';
@@ -18,8 +17,6 @@ injectGlobal`
 const PageTemplate = ({children, ...props}) => (
   <Page {...props}>
     <HeaderBar />
-
-    <NavBar />
 
     <Main>
       { children }

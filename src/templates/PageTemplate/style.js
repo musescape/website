@@ -1,24 +1,22 @@
 import styled from 'styled-components';
+import { margins } from '../../theme';
 
 export const Page = styled.div`
   display: grid;
-  margin: 0 2rem;
   grid-gap: 2rem 1rem;
   grid-template-columns: 2fr 6fr 4fr;
   grid-template-rows: 3rem auto;
   grid-template-areas:
-          "logo menu menu"
+          "header header header"
           "content content sidebar"
           "subsection subsection subsection"
           "footer footer footer";
           
-  @media all and (max-width: 992px) {
-    margin: 0 1rem;
-  }
+
   
   @media all and (max-width: 768px) {
     grid-template-areas:
-          "logo menu menu"
+          "header header header"
           "content content content"
           "sidebar sidebar sidebar"
           "subsection subsection subsection"
@@ -30,8 +28,7 @@ export const Page = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-            "logo"
-            "menu"
+            "header"
             "content"
             "sidebar"
             "subsection"
@@ -41,6 +38,8 @@ export const Page = styled.div`
 
 export const Main = styled.main`
   margin-top: 2rem;
+  
+  ${margins}
   
   @supports (display: grid) {  
     margin-top: 0;
@@ -54,11 +53,6 @@ export const Main = styled.main`
   /*--- Fallbacks ---*/
   
   grid-area: content;
-  
-  @media all and (max-width: 760px) {
-    display: block;
-    width: 100%;
-  }
   
   h2 {
     font-size: 1.5em;
