@@ -7,20 +7,20 @@ export const Page = styled.div`
   grid-template-columns: 2fr 6fr 4fr;
   grid-template-rows: 3rem auto;
   grid-template-areas:
-          "header header header"
-          "content content sidebar"
-          "subsection subsection subsection"
-          "footer footer footer";
+    "header header header"
+    "content content sidebar"
+    "subsection subsection subsection"
+    "footer footer footer";
           
 
   
   @media all and (max-width: 768px) {
     grid-template-areas:
-          "header header header"
-          "content content content"
-          "sidebar sidebar sidebar"
-          "subsection subsection subsection"
-          "footer footer footer";
+      "header header header"
+      "content content content"
+      "sidebar sidebar sidebar"
+      "subsection subsection subsection"
+      "footer footer footer";
   }
   
   @media all and (max-width: 576px) {
@@ -28,11 +28,11 @@ export const Page = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-            "header"
-            "content"
-            "sidebar"
-            "subsection"
-            "footer";
+      "header"
+      "content"
+      "sidebar"
+      "subsection"
+      "footer";
   }
 `;
 
@@ -62,5 +62,13 @@ export const Main = styled.main`
   
   p {
     margin-bottom: 0;
+  }
+  
+  @media screen and (max-width: 767px) {
+    margin-top: 4rem;
+	}
+	
+  @media all and (max-width: 576px) {
+    margin-top: 7rem;
   }
 `;

@@ -15,13 +15,13 @@ const globalStyles = `
   
   html {
     font-size: 16px;
-    font-family: Georgia, serif;
+    font-weight: 400;
+		font-family: 'Work Sans', sans-serif;
   }
   
   body {
     background-color: #fbfbfb;
-    font-family: 'Work Sans', sans-serif;
-		font-weight: 400;
+
   }
   
   h1, h2, h3 {
@@ -38,7 +38,7 @@ const globalStyles = `
 const margins = `
   margin: 0 2rem;
   
-  @media all and (max-width: 992px) {
+  @media all and (max-width: 768px) {
     margin: 0 1rem;
   }
 `;
