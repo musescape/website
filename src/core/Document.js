@@ -1,14 +1,13 @@
 import React from 'react';
 import { any, node, object } from 'prop-types';
 
-const Document = ({Html, Head, Body, children, renderMeta}) => (
+const Document = ({ Html, Head, Body, children, renderMeta }) => (
 	<Html>
 		<Head>
 			<meta charSet="UTF-8"/>
 			<meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1, width=320"/>
 
-			<title>React Static - Website Starter</title>
 			<meta name="description" content=""/>
 			<meta itemProp="name" content=""/>
 			<meta itemProp="url" content=""/>

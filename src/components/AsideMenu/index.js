@@ -1,21 +1,18 @@
 import React, { Fragment } from 'react';
+import { node } from "prop-types";
 
 import { Aside } from './style';
 
-const AsideMenu = () => (
+const AsideMenu = ({ children }) => (
   <Fragment>
     <Aside>
-      <h3>Additional stuff</h3>
-
-      <ul>
-        <li>Items</li>
-        <li>Are</li>
-        <li>Listed</li>
-        <li>Here</li>
-        <li>Wow!</li>
-      </ul>
+      { children }
     </Aside>
   </Fragment>
 );
+
+AsideMenu.propTypes = {
+  children: node.isRequired
+};
 
 export default AsideMenu;

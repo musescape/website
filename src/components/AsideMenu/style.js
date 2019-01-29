@@ -12,7 +12,6 @@ export const Aside = styled.aside`
   width: 30%;
   display: inline-block;
   vertical-align: top;
-  padding: 1rem;
   
   grid-area: sidebar;
   

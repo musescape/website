@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export const Projects = styled.section`
+export const ProjectHeading = styled.h2`
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+`;
+
+export const ProjectContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   

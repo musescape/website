@@ -1,9 +1,10 @@
 import React from 'react';
+import PageTemplate from "../templates/PageTemplate";
 
 const NotFound = () => (
-	<div>
+	<PageTemplate>
 		<h1>404</h1>
-	</div>
+	</PageTemplate>
 );
 
 export default NotFound;

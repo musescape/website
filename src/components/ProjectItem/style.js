@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Project = styled.figure`
+export const ProjectItem = styled.figure`
   @supports (display: grid) {
     margin-top: 0;
     width: auto;

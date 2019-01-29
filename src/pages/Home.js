@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { string } from 'prop-types';
 import { withSiteData } from 'react-static';
 
 import PageTemplate from '../templates/PageTemplate';
+import ProjectContainer from '../components/ProjectContainer';
 
-const Home = ({title}) => (
-	<PageTemplate>
+const MainContent = ({ title }) => (
+	<Fragment>
 		<h2>Welcome to {title}!</h2>
 
 		<p>
@@ -23,6 +24,31 @@ const Home = ({title}) => (
 			qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
 			consectetur
 		</p>
+	</Fragment>
+);
+
+const AsideContent = () => (
+	<Fragment>
+		<h3>Additional stuff</h3>
+
+		<ul>
+			<li>Items</li>
+			<li>Are</li>
+			<li>Listed</li>
+			<li>Here</li>
+			<li>Wow!</li>
+		</ul>
+	</Fragment>
+);
+
+const Home = ({title, siteUrl}) => (
+	<PageTemplate
+		title={siteUrl}
+		// fullPage
+		main={ <MainContent title={title}/> }
+		aside={ <AsideContent /> }
+	>
+		<ProjectContainer />
 	</PageTemplate>
 );
 

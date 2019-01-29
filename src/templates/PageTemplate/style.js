@@ -1,29 +1,18 @@
 import styled from 'styled-components';
 import { margins } from '../../theme';
 
-export const Page = styled.div`
+export const Page = styled.article`
   display: grid;
+
   grid-gap: 2rem 1rem;
   grid-template-columns: 2fr 6fr 4fr;
   grid-template-rows: 3rem auto;
-  grid-template-areas:
-    "header header header"
+  grid-template-areas: "header header header"
     "content content sidebar"
     "subsection subsection subsection"
     "footer footer footer";
-          
 
-  
   @media all and (max-width: 768px) {
-    grid-template-areas:
-      "header header header"
-      "content content content"
-      "sidebar sidebar sidebar"
-      "subsection subsection subsection"
-      "footer footer footer";
-  }
-  
-  @media all and (max-width: 576px) {
     grid-gap: 2rem 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -31,6 +20,56 @@ export const Page = styled.div`
       "header"
       "content"
       "sidebar"
+      "subsection"
+      "footer";
+  }
+`;
+
+export const PageFullContent = styled.article`
+  display: grid;
+
+  grid-gap: 2rem 1rem;
+  grid-template-columns: 2fr 6fr 4fr;
+  grid-template-rows: 3rem auto;
+  grid-template-areas:
+    "header header header"
+    "content content content"
+    "sidebar sidebar sidebar"
+    "subsection subsection subsection"
+    "footer footer footer";
+
+  @media all and (max-width: 768px) {
+    grid-gap: 2rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "subsection"
+      "footer";
+  }
+`;
+
+export const PageNoSideBar = styled.article`
+  display: grid;
+
+  grid-gap: 2rem 1rem;
+  grid-template-columns: 2fr 6fr 4fr;
+  grid-template-rows: 3rem auto;
+  grid-template-areas: 
+    "header header header"
+    "content content content"
+    "subsection subsection subsection"
+    "footer footer footer";
+
+  @media all and (max-width: 768px) {
+    grid-gap: 2rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "content"
       "subsection"
       "footer";
   }
@@ -65,10 +104,6 @@ export const Main = styled.main`
   }
   
   @media screen and (max-width: 767px) {
-    margin-top: 4rem;
-	}
-	
-  @media all and (max-width: 576px) {
     margin-top: 7rem;
-  }
+	}
 `;
