@@ -11,13 +11,38 @@ const getSiteData = () => ({
 	title: TITLE
 });
 
-const getRoutes = () => [{
-	path: '/',
-	component: 'src/pages/Home'
-}, {
-	is404: true,
-	component: 'src/pages/NotFound'
-}];
+const getRoutes = async () => {
+	const { posts, home } = await jdown('content');
+
+	return [
+		{
+			path: '/',
+			component: 'src/pages/Home',
+			getData: () => ({
+				...home,
+				posts
+			}),
+		},
+		{
+			path: '/blog',
+			component: 'src/pages/Blog',
+			getData: () => ({
+				posts,
+			}),
+			children: posts.map(post => ({
+				path: `/post/${post.slug}`,
+				component: 'src/containers/Post',
+				getData: () => ({
+					post,
+				}),
+			})),
+		},
+		{
+			is404: true,
+			component: 'src/pages/NotFound'
+		}
+	]
+};
 
 const Document = ({ Html, Head, Body, children, renderMeta }) => (
 	<Html>
