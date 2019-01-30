@@ -1,5 +1,7 @@
+import React from 'react';
+import jdown from 'jdown';
+
 import renderToHtml from './src/modules/renderStyles';
-import React from "react";
 
 const TITLE = 'MuseScape';
 const URL = 'musescape.com';
